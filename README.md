@@ -1,3 +1,12 @@
+#Intro
+I need a replacement to bootstrap modals in http://trackthisfor.me , and avgrund was perfect.
+Some changes was made (principally because the voronianski fork doesn't work well if you have more than 1 modal on the page).
+
+- this fork doesn't have a template option, but accepts an 'element' option: this contains the id ('#id') of the div that will be rendered as a modal.
+- only one overlay is created if there are more than one modals.
+- commented the body animation (i don't need it on trackthisfor.me)
+- add the 'overflow' option, for long text modals (it works like the css attribute)
+
 # Avgrund
 
 Avgrund is a jQuery plugin for your modal boxes and popups. It uses new concept showing depth between popup and page.
@@ -42,7 +51,7 @@ $('element').avgrund({
 	overlayClass: '', // ..and overlay block
 	enableStackAnimation: false, // enables different type of popin's animation
 	onBlurContainer: '', // enables blur filter for specified block 
-	template: 'Your content goes here..'
+	element: 'Your content goes here..'
 });
 ```
 

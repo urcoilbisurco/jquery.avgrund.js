@@ -20,7 +20,6 @@
 
 		<div class="buttons">
 			<a href="#" id="show" class="button left">Show it</a>
-			<a href="http://labs.voronianski.com/jquery.avgrund.js_v1_0.zip" class="button download left">Download source</a>
 		</div>
 
 		<p class="clear">You can simply init Avgrund with one line:</p>
@@ -34,21 +33,21 @@
 	showCloseText: '', // type your text for close button
 	holderClass: '', // lets you name custom class for popin holder..
 	overlayClass: '', // ..and overlay block
+	overflow: 'scroll', //default is hidden, use scroll for long text inside modals
 	enableStackAnimation: false, // another animation type
 	onBlurContainer: '', // enables blur filter for specified block 
-	template: 'Your content goes here..'
+	element: '#modalID'
 });</pre>
 		<p>Avgrund plugin was inspired by Hakimel's Avgrund.js <a href="https://github.com/hakimel/avgrund/" target="_blank">demo</a>.</p>
-
-		<div class="socials">
-			<div class="right">
-				<span>&copy;2012</span>
-				<a href="http://twitter.com/voronianski/" target="blank">@voronianski</a> /
-				<a href="http://pixelhunter.me/" target="blank">pixelhunter.me</a> 
-			</div>
+		
+	</div>
+	<div id="modalId">
+		<p>So implement your design and place content here! If you want to close modal, please hit "Esc", click somewhere on the screen or use special button.</p>
+		<div>
+			<a href="http://github.com/urcoilbisurco/jquery.avgrund.js" target="_blank" class="github">Avgrund on Github</a>
+			<a href="http://twitter.com/urcoilbisurco" target="_blank" class="twitter">Twitter</a>
 		</div>
 	</div>
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script src="./js/jquery.avgrund.js"></script>
 	<script>
@@ -60,12 +59,7 @@
 			showCloseText: 'Close',
 			enableStackAnimation: true,
 			onBlurContainer: '.container',
-			template: '<p>So implement your design and place content here! If you want to close modal, please hit "Esc", click somewhere on the screen or use special button.</p>' +
-			'<div>' +
-			'<a href="http://github.com/voronianski/jquery.avgrund.js" target="_blank" class="github">Avgrund on Github</a>' +
-			'<a href="http://twitter.com/voronianski" target="_blank" class="twitter">Twitter</a>' +
-			'<a href="http://dribbble.com/voronianski" target="_blank" class="dribble">Dribbble</a>' +				
-			'</div>'
+			element: '#modalId'
 		});
 	});
 	</script>
