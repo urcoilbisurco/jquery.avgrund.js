@@ -51,7 +51,8 @@ $('element').avgrund({
 	overlayClass: '', // ..and overlay block
 	enableStackAnimation: false, // enables different type of popin's animation
 	onBlurContainer: '', // enables blur filter for specified block 
-	element: 'Your content goes here..'
+	element: '#modalID',
+	overflow: 'scroll', //default is hidden, use scroll for long text inside modals
 });
 ```
 
